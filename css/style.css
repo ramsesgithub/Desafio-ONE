@@ -150,23 +150,13 @@ html,body{
 
 
 
-
-
-
-
-
-
-
-
 .footer{
     background-color: #000;
-    height: 90px;
+    height: 95px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 
@@ -181,4 +171,40 @@ html,body{
     color: #fff;
     text-align: center;
     font-family: 'Merriweather', serif;
+}
+
+/* Media Query */
+
+@media (max-width:680px){
+    .header{
+        margin-bottom: 80px ;
+    }
+    .header h1{
+        font-size: 25px;
+    }
+    .conteiner{
+        height: 790px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .textoEncriptar{
+        width: 360px;
+        height: 200px;
+    }
+    .encriptar{
+        width: 177px;
+    }
+    .desencriptar{
+        width: 177px;
+    }
+    .textoDesencriptado{
+        width: 360px;
+        margin-top: 30px ;
+    }
+    .copiar{
+        width: 177px;
+    }
 }
