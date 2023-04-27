@@ -1,0 +1,11 @@
+"Que es un array"
+
+"Edición y abstracción de datos en un array - para JavaScript" 
+
+"Abstracción de datos html desde JavaScript".
+
+" Edición de objetos html y css desde JavaScript"
+
+" Diseño responsive para dispositivos."
+
+en base a esas 4 cosas gira este proyecto.

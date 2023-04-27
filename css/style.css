@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+
+.header{
+    background-color: #000;
+    display: flex;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+}
+.header h1{
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Merriweather', serif;
+}
+
+
+
+.background{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(255,255,255,1) 70%);
+}
+
+
+.conteiner{
+    height: 890px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,auto);
+}
+
+
+
+.container-input{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: center;
+}
+
+.textoEncriptar{
+    width: 657px;
+    height: 188px;
+    border-radius: 30px;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Domine', serif;
+    padding: 10px
+}
+
+.textoEncriptar::placeholder{
+    padding: 10px
+}
+
+
+
+
+
+.container-boton{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    justify-self: center;
+}
+
+
+
+.encriptar{
+    width: 297px;
+    height: 51px;
+    border-radius: 40px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.desencriptar{
+    width: 297px;
+    height: 51px;
+    border-radius: 40px;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+
+
+
+.container-texto{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    align-self: center;
+    display: none;
+}
+
+.textoDesencriptado{
+    height: 151px;
+    width: 657px;
+    border-radius: 30px;
+    resize: none;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: 'Domine', serif;
+    font-size: 18px;
+    cursor: auto;
+    padding: 40px;
+}
+
+
+
+
+
+
+
+.copiar{
+    background-color: #fff;
+    width: 297px;
+    height: 51px;
+    cursor: pointer;
+    border-radius: 40px;
+    grid-column: 2/3;
+    grid-row: 5/5;
+    justify-self: center;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hecho{
+    color: #fff;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
