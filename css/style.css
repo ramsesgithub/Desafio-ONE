@@ -159,6 +159,7 @@ html,body{
 
 
 .footer{
+    background-color: #000;
     height: 90px;
     display: flex;
     flex-direction: column;
