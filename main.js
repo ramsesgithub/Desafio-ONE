@@ -5,8 +5,10 @@ const botonCopiar=document.getElementById("copiar");
 
 
 botonEncriptar.addEventListener("click", myFunctionEncriptar);
+
 botonDesencriptar.addEventListener("click", myFunctionDesencriptar);
-botonCopiar.addEventListener=("click", copiar);
+
+botonCopiar.addEventListener("click", copiar);
 
 // function encriptar(){
 //     let texto=document.getElementById("textoEncriptar").value.toLowerCase();
@@ -44,7 +46,7 @@ function myFunctionEncriptar() {
     
     document.getElementById('textoDesencriptado').innerHTML=encriptado;
 
-    let x = document.getElementById('container-texto');
+    let x = document.getElementById('textoDesencriptado');
     let c= document.getElementById("copiar");
 
     if(document.getElementById("textoEncriptar").value!==""){
@@ -66,19 +68,23 @@ function myFunctionDesencriptar(){
     
     document.getElementById('textoDesencriptado').innerHTML=encriptado;
 
-    let x = document.getElementById('container-texto');
+    let x = document.getElementById('textoDesencriptado');
+    let c= document.getElementById("copiar");
     if(document.getElementById("textoEncriptar").value!==""){
         x.style.display = 'block';
+        c.style.display = 'block';
     }else{
         x.style.display = 'none';
+        c.style.display = 'none';
     }
 }
 
 
 
-
 function copiar(){
-    let copiado=document.querySelector("#textoDesencriptado");
+    let copiado = document.createElement("input");
+    copiado.setAttribute("value", document.getElementById("textoDesencriptado").innerHTML);
+    document.body.appendChild(copiado);
     copiado.select();
     document.execCommand("copy");
 }

@@ -109,7 +109,6 @@ html,body{
     grid-column: 2/3;
     grid-row: 4/5;
     align-self: center;
-    display: none;
 }
 
 .textoDesencriptado{
@@ -124,6 +123,7 @@ html,body{
     font-size: 18px;
     cursor: auto;
     padding: 40px;
+    display: none;
 }
 
 
