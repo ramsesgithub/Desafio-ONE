@@ -30,8 +30,18 @@ html,body{
 
 
 .background{
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(255,255,255,1) 70%);
+    background: linear-gradient(150deg, rgb(15, 15, 15) 10%, rgb(197, 195, 195) 70%);
+    background-size: 400% 300%;
+    animation: backgroundBlack 5s ease infinite;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes backgroundBlack {
+    0%{background-position: 0% 50%}
+    50%{background-position: 100% 50%}
+    100%{background-position: 0% 50%}
 }
 
 
@@ -53,6 +63,7 @@ html,body{
 .textoEncriptar{
     width: 657px;
     height: 188px;
+    border: none;
     border-radius: 30px;
     background-color: #000;
     color: #fff;
@@ -73,11 +84,20 @@ html,body{
     grid-column: 2/3;
     grid-row: 3/4;
     justify-self: center;
+    display: flex;
+    gap: 30px;
 }
 
 
+.container-boton button:hover{
+    transform: scale(1.05);
+    transition: .3s;
+}
+
 
 .encriptar{
+    transition: .3s;
+    border: none;
     width: 297px;
     height: 51px;
     border-radius: 40px;
@@ -89,6 +109,8 @@ html,body{
     font-size: 16px;
 }
 .desencriptar{
+    transition: .3s;
+    border: none;
     width: 297px;
     height: 51px;
     border-radius: 40px;
@@ -112,6 +134,7 @@ html,body{
 }
 
 .textoDesencriptado{
+    border: none;
     height: 151px;
     width: 657px;
     border-radius: 30px;
@@ -133,6 +156,7 @@ html,body{
 
 
 .copiar{
+    border: none;
     background-color: #fff;
     width: 297px;
     height: 51px;
@@ -177,7 +201,7 @@ html,body{
 
 @media (max-width:680px){
     .header{
-        margin-bottom: 80px ;
+        margin-bottom: 0px ;
     }
     .header h1{
         font-size: 25px;
@@ -185,7 +209,7 @@ html,body{
     .conteiner{
         height: 790px;
         display: flex;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         gap: 30px;
@@ -193,6 +217,9 @@ html,body{
     .textoEncriptar{
         width: 360px;
         height: 200px;
+    }
+    .container-boton{
+        gap: 15px;
     }
     .encriptar{
         width: 177px;

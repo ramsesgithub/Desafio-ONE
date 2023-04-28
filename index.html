@@ -8,32 +8,34 @@
     <script type="text" src="/main.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="background">
     <header class="header">
         <a href=""><img src="" alt=""></a>
         <h1>Encriptar - Desencriptar</h1>
         <a href=""><img src="" alt=""></a>
     </header>
-    <div class="background">
+    <div>
         <main>
-            <div class="conteiner">
-                <div class="container-input">
-                    <input type="text" id="textoEncriptar" class="textoEncriptar" placeholder="Escriba el texto acá" required>
+            <div class="resposive">
+                <div class="conteiner">
+                    <div class="container-input">
+                        <input type="text" id="textoEncriptar" class="textoEncriptar" placeholder="Escriba el texto acá" required>
+                    </div>
+                    <div class="container-boton">
+                        <button id="encriptar" class="encriptar">Encriptar</button>
+                        <button id="desencriptar" class="desencriptar">Desencriptar</button>
+                    </div>
+                    <div class="container-texto" id="container-texto">
+                        <textarea name="" id="textoDesencriptado" class="textoDesencriptado" readonly="readonly"></textarea>
+                    </div>
+                    <button id="copiar" class="copiar">Copiar</button>
                 </div>
-                <div class="container-boton">
-                    <button id="encriptar" class="encriptar">Encriptar</button>
-                    <button id="desencriptar" class="desencriptar">Desencriptar</button>
-                </div>
-                <div class="container-texto" id="container-texto">
-                    <textarea name="" id="textoDesencriptado" class="textoDesencriptado" readonly="readonly"></textarea>
-                </div>
-                <button id="copiar" class="copiar">Copiar</button>
             </div>
         <footer>
             <div class="footer">
                 <div class="contacto">
                     <a href="https://github.com/ramsesgithub" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-                    <a href="https://www.linkedin.com/in/ramses-quinteros/" target="_blank"><img src="./img/LinkedIn.png" alt=""></a>
+                    <a href="" target="_blank"><img src="./img/LinkedIn.png" alt=""></a>
                 </div>
                 <div>
                     <p class="hecho">Hecho por Ramsés Quinteros :)</p>
