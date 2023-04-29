@@ -76,8 +76,16 @@ html,body{
     padding: 10px
 }
 
-
-
+.info{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.info p{
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    color: #000;
+    font-weight: bold;
+}
 
 
 .container-boton{
@@ -170,6 +178,11 @@ html,body{
     font-size: 16px;
     padding: 10px;
     display: none;
+    transition: .3s;
+}
+.copiar:hover{
+    transform: scale(1.05);
+    transition: .3s;
 }
 
 
@@ -189,12 +202,15 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }
 
 .hecho{
     color: #fff;
     text-align: center;
     font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 /* Media Query */
@@ -218,6 +234,10 @@ html,body{
         width: 360px;
         height: 200px;
     }
+    .info p{
+        font-size: 15px;
+    }
+
     .container-boton{
         gap: 15px;
     }
@@ -233,5 +253,8 @@ html,body{
     }
     .copiar{
         width: 177px;
+    }
+    .contacto img{
+        width: 60px;
     }
 }

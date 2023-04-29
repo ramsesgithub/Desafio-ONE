@@ -25,6 +25,7 @@ function myFunctionEncriptar() {
         if(document.getElementById("textoEncriptar").value!==""){
             x.style.display = 'block';
             c.style.display = 'block';
+            limpiar();
         }else{
             x.style.display = 'none';
             c.style.display = 'none';
@@ -52,6 +53,7 @@ function myFunctionDesencriptar(){
         if(document.getElementById("textoEncriptar").value!==""){
             x.style.display = 'block';
             c.style.display = 'block';
+            limpiar();
         }else{
             x.style.display = 'none';
             c.style.display = 'none';
@@ -70,4 +72,8 @@ function copiar(){
     copiado.select();
     document.execCommand("copy");
     document.body.removeChild(copiado);
+}
+
+function limpiar() {
+    document.getElementById("textoEncriptar").value = "";
 }
