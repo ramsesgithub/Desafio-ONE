@@ -61,6 +61,7 @@ html,body{
 }
 
 .textoEncriptar{
+    outline: none;
     width: 657px;
     height: 188px;
     border: none;

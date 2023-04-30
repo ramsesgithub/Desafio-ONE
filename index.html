@@ -15,26 +15,26 @@
     <header class="header">
         <h1>Encriptar - Desencriptar</h1>
     </header>
-    <div>
-        <main>
-            <div class="resposive">
-                <div class="conteiner">
-                    <div class="info">
-                        <p>⚠️ Solo ingresar letras en minuscula y sin acento</p>
+            <main>
+                <section>
+                    <div class="conteiner">
+                        <div class="info">
+                            <p>⚠️ Solo ingresar letras en minuscula y sin acento</p>
+                        </div>
+                        <div class="container-input">
+                            <input type="text" id="textoEncriptar" class="textoEncriptar" placeholder="Escriba el texto acá" required>
+                        </div>
+                        <div class="container-boton">
+                            <button id="encriptar" class="encriptar">Encriptar</button>
+                            <button id="desencriptar" class="desencriptar">Desencriptar</button>
+                        </div>
+                        <div class="container-texto" id="container-texto">
+                            <textarea name="" id="textoDesencriptado" class="textoDesencriptado" readonly="readonly"></textarea>
+                        </div>
+                        <button id="copiar" class="copiar">Copiar</button>
                     </div>
-                    <div class="container-input">
-                        <input type="text" id="textoEncriptar" class="textoEncriptar" placeholder="Escriba el texto acá" required>
-                    </div>
-                    <div class="container-boton">
-                        <button id="encriptar" class="encriptar">Encriptar</button>
-                        <button id="desencriptar" class="desencriptar">Desencriptar</button>
-                    </div>
-                    <div class="container-texto" id="container-texto">
-                        <textarea name="" id="textoDesencriptado" class="textoDesencriptado" readonly="readonly"></textarea>
-                    </div>
-                    <button id="copiar" class="copiar">Copiar</button>
-                </div>
-            </div>
+                </section>
+            </main>
         <footer>
             <div class="footer">
                 <div class="contacto">
@@ -46,7 +46,6 @@
                 </div>
             </div>
         </footer>
-    </div>
     <script src="main.js"></script>
 </body>
 </html>
