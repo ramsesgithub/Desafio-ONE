@@ -1,16 +1,15 @@
 const botonEncriptar=document.getElementById("encriptar");
 const botonDesencriptar=document.getElementById("desencriptar");    
 const botonCopiar=document.getElementById("copiar");    
-
 const caracteresValidos = /^[a-zñ\s\¿\?\¡\!\,\.]+$/;
 
-botonEncriptar.addEventListener("click", myFunctionEncriptar);
-botonDesencriptar.addEventListener("click", myFunctionDesencriptar);
+botonEncriptar.addEventListener("click", encriptar);
+botonDesencriptar.addEventListener("click", desencriptar);
 botonCopiar.addEventListener("click", copiar);
 
 
 
-function myFunctionEncriptar() {
+function encriptar() {
     let texto=document.getElementById("textoEncriptar").value;
     if(caracteresValidos.test(texto)){
         let encriptado=texto.replace(/e/mg, "enter");
@@ -18,27 +17,15 @@ function myFunctionEncriptar() {
         encriptado=encriptado.replace(/i/mg, "imes");
         encriptado=encriptado.replace(/a/mg, "ai");
         encriptado=encriptado.replace(/u/mg, "ufat");
-        document.getElementById('textoDesencriptado').innerHTML=encriptado;
-
-        let x = document.getElementById('textoDesencriptado');
-        let c= document.getElementById("copiar");
-        if(document.getElementById("textoEncriptar").value!==""){
-            x.style.display = 'block';
-            c.style.display = 'block';
-            limpiar();
-        }else{
-            x.style.display = 'none';
-            c.style.display = 'none';
-        }
+        document.getElementById('textoDesencriptado').innerHTML=encriptado
+        mostrar();
     }else{
         alert("El texto no es valido, escribir en minusculas, sin acentos y sin números.");
     }
 }
 
 
-
-
-function myFunctionDesencriptar(){
+function desencriptar(){
     let texto=document.getElementById("textoEncriptar").value;
     if(caracteresValidos.test(texto)){
         let encriptado=texto.replace(/enter/mg, "e");
@@ -47,17 +34,7 @@ function myFunctionDesencriptar(){
         encriptado=encriptado.replace(/ai/mg, "a");
         encriptado=encriptado.replace(/ufat/mg, "u");
         document.getElementById('textoDesencriptado').innerHTML=encriptado;
-        let x = document.getElementById('textoDesencriptado');
-        let c= document.getElementById("copiar");
-        
-        if(document.getElementById("textoEncriptar").value!==""){
-            x.style.display = 'block';
-            c.style.display = 'block';
-            limpiar();
-        }else{
-            x.style.display = 'none';
-            c.style.display = 'none';
-        }
+        mostrar();
     }else{
         alert("El texto no es valido, escribir en minusculas, sin acentos y sin números.");
     }
@@ -74,6 +51,17 @@ function copiar(){
     document.body.removeChild(copiado);
 }
 
-function limpiar() {
-    document.getElementById("textoEncriptar").value = "";
+
+function mostrar(){
+    let x = document.getElementById('textoDesencriptado');
+    let c= document.getElementById("copiar");
+    if(document.getElementById("textoEncriptar").value!==""){
+        x.style.display = 'block';
+        c.style.display = 'block';
+        document.getElementById("textoEncriptar").value = "";
+    }else{
+        x.style.display = 'none';
+        c.style.display = 'none';
+    }
 }
+
