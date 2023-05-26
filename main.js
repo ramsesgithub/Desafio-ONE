@@ -20,7 +20,7 @@ function encriptar() {
         document.getElementById('textoDesencriptado').innerHTML=encriptado
         mostrar();
     }else{
-        alert("El texto no es valido, escribir en minusculas, sin acentos y sin números.");
+        alert("Recuerda, Sólo letras Minúsculas y sin acentos.");
     }
 }
 
@@ -36,7 +36,7 @@ function desencriptar(){
         document.getElementById('textoDesencriptado').innerHTML=encriptado;
         mostrar();
     }else{
-        alert("El texto no es valido, escribir en minusculas, sin acentos y sin números.");
+        alert("Recuerda, Sólo letras Minúsculas y sin acentos.");
     }
 }
 
