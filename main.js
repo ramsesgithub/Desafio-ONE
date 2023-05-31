@@ -11,32 +11,52 @@ botonCopiar.addEventListener("click", copiar);
 
 function encriptar() {
     let texto=document.getElementById("textoEncriptar").value;
-    if(caracteresValidos.test(texto)){
-        let encriptado=texto.replace(/e/mg, "enter");
-        encriptado=encriptado.replace(/o/mg, "ober");
-        encriptado=encriptado.replace(/i/mg, "imes");
-        encriptado=encriptado.replace(/a/mg, "ai");
-        encriptado=encriptado.replace(/u/mg, "ufat");
-        document.getElementById('textoDesencriptado').innerHTML=encriptado
-        mostrar();
+    if(texto.length < 1){
+        Swal.fire({
+            icon: 'error',
+            text: 'Debes Ingresar al menos un caracter',
+        });
     }else{
-        alert("Recuerda, Sólo letras Minúsculas y sin acentos.");
+        if(caracteresValidos.test(texto)){
+            let encriptado=texto.replace(/e/mg, "enter");
+            encriptado=encriptado.replace(/o/mg, "ober");
+            encriptado=encriptado.replace(/i/mg, "imes");
+            encriptado=encriptado.replace(/a/mg, "ai");
+            encriptado=encriptado.replace(/u/mg, "ufat");
+            document.getElementById('textoDesencriptado').innerHTML=encriptado
+            mostrar();
+        }else{
+            Swal.fire({
+                icon: 'warning',
+                text: 'Recuerda, Sólo letras Minúsculas y sin acentos.',
+            });
+        }
     }
 }
 
 
 function desencriptar(){
     let texto=document.getElementById("textoEncriptar").value;
-    if(caracteresValidos.test(texto)){
-        let encriptado=texto.replace(/enter/mg, "e");
-        encriptado=encriptado.replace(/ober/mg, "o");
-        encriptado=encriptado.replace(/imes/mg, "i");
-        encriptado=encriptado.replace(/ai/mg, "a");
-        encriptado=encriptado.replace(/ufat/mg, "u");
-        document.getElementById('textoDesencriptado').innerHTML=encriptado;
-        mostrar();
+    if(texto.length < 1){
+        Swal.fire({
+            icon: 'error',
+            text: 'Debes Ingresar al menos un caracter',
+        });
     }else{
-        alert("Recuerda, Sólo letras Minúsculas y sin acentos.");
+        if(caracteresValidos.test(texto)){
+            let encriptado=texto.replace(/enter/mg, "e");
+            encriptado=encriptado.replace(/ober/mg, "o");
+            encriptado=encriptado.replace(/imes/mg, "i");
+            encriptado=encriptado.replace(/ai/mg, "a");
+            encriptado=encriptado.replace(/ufat/mg, "u");
+            document.getElementById('textoDesencriptado').innerHTML=encriptado;
+            mostrar();
+        }else{
+            Swal.fire({
+                icon: 'warning',
+                text: 'Recuerda, Sólo letras Minúsculas y sin acentos.',
+            });
+        }
     }
 }
 
